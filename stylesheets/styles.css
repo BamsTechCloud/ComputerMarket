@@ -127,7 +127,7 @@ a {
 @media all and (min-width:768px) {
     .main-content {
         flex-direction: row;
-        overflow: auto;
+        overflow: hidden;
     }
 
     .thumbnail-list {
