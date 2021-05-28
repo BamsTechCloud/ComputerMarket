@@ -10,7 +10,13 @@
     font-style: normal;
    }
 
+   html,body {
+       height: 100%;
+   }
+
 body {
+    display: flex;
+    flex-direction: column;
     background: rgb(149, 194, 215);
     font-size: 10px;
 }
@@ -37,6 +43,8 @@ a {
 .thumbnail-list {
     list-style: none;
     padding: 0;
+    white-space: nowrap;
+    overflow-x: auto;
 }
 
 .thumbnail-title {
