@@ -11,4 +11,17 @@ function setDetails(imageUrl,titleText) {
     Detail_Image_Title.textContent = titleText;
 }
 
-setDetails('images/tech2.jpg','you are King');
+function imageFromThumb(thumbnail) {
+    'use strict';
+    return thumbnail.getAttribute('data-image-url');
+}
+
+
+function titleFromThumb(thumbnail) {
+    'use strict';
+    return thumbnail.getAttribute('data-image-title');
+}
+
+var firstThumbnail = document.querySelector(THUMBNAIL_LINK_SELECTOR);
+imageFromThumb(firstThumbnail);
+titleFromThumb(firstThumbnail);
