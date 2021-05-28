@@ -22,6 +22,10 @@ function titleFromThumb(thumbnail) {
     return thumbnail.getAttribute('data-image-title');
 }
 
-var firstThumbnail = document.querySelector(THUMBNAIL_LINK_SELECTOR);
-imageFromThumb(firstThumbnail);
-titleFromThumb(firstThumbnail);
+function setDetailsFromThumb(thumbnail) {
+    'use strict';
+    setDetails(imageFromThumb(thumbnail),titleFromThumb(thumbnail));
+}
+
+var thumbnails = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
+setDetailsFromThumb(thumbnails[4]);
