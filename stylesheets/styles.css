@@ -21,8 +21,16 @@ body {
     font-size: 10px;
 }
 
+.main-header {
+    flex: 0 1 auto;
+}
+
 a {
     text-decoration: none;
+}
+
+.main-content {
+    flex: 1 1 auto;
 }
 
 .logo-text {
