@@ -32,7 +32,20 @@ function addThumbClickHandler(thumb) {
     thumb.addEventListener('click',function(event) {
         event.preventDefault();
         setDetailsFromThumb(thumb);
-    })
-
+    });
 }
+
+function getThumbnailArray() {
+    'use strict';
+    var thumbnail = document.querySelectorAll(THUMBNAIL_LINK_SELECTOR);
+    var thumbnailArray = [].slice.call(thumbnail);
+    return thumbnailArray;
+}
+
+function initializeEvents() {
+    var thumbnails = getThumbnailArray();
+    thumbnails.forEach(addThumbClickHandler);
+}
+
+initializeEvents();
 
