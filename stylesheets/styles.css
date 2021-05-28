@@ -60,11 +60,16 @@ a {
     min-width: 120px;
     border: 1px solid rgb(100%,100%,100%);
     border: 1px solid rgba(100%,100%,100%,0.8);
+    transition: transform 133ms ease-in-out;
+}
+
+.thumbnail-item:hover {
+    transform: scale(1.2);
 }
 
 .thumbnail-list {
     list-style: none;
-    padding: 0;
+    padding: 20px 0px;
     display: flex;
     justify-content: space-between;
     flex: 0 1 auto;
@@ -98,6 +103,12 @@ a {
 .detail-image-frame {
     position: relative;
     text-align: center;
+    transition: transform 333ms;
+}
+
+.is-tiny {
+    transform: scale(0.001);
+    transition: transform 0ms;
 }
 .detail-image-title {
     color: white;
@@ -123,6 +134,7 @@ a {
         flex-direction: column;
         order: 0;
         margin-left: 20px;
+        padding: 0px 35px;
     }
 
     .thumbnail-item {
