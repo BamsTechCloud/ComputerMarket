@@ -2,6 +2,7 @@
 var DETAIL_IMAGE_SELECTOR = '[data-image-role="target"]';
 var DETAIL_IMAGE_TITLE = '[data-image-role="title"]';
 var THUMBNAIL_LINK_SELECTOR = '[data-image-role="trigger"]';
+var HIDDEN_DETAIL_CLASS = 'hidden-detail';
 
 function setDetails(imageUrl,titleText) {
     'use strict';
@@ -32,7 +33,18 @@ function addThumbClickHandler(thumb) {
     thumb.addEventListener('click',function(event) {
         event.preventDefault();
         setDetailsFromThumb(thumb);
+        showDetails();
     });
+}
+
+function hideDetails() {
+    'use strict';
+    document.body.classList.add(HIDDEN_DETAIL_CLASS);
+}
+
+function showDetails() {
+    'use strict';
+    document.body.classList.remove(HIDDEN_DETAIL_CLASS);
 }
 
 function getThumbnailArray() {
