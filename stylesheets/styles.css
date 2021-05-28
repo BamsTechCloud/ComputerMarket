@@ -31,6 +31,8 @@ a {
 
 .main-content {
     flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-text {
@@ -43,7 +45,8 @@ a {
 
 .thumbnail-item {
     display: inline-block;
-    width: 120px;
+    max-width: 120px;
+    min-width: 120px;
     border: 1px solid rgb(100%,100%,100%);
     border: 1px solid rgba(100%,100%,100%,0.8);
 }
@@ -51,6 +54,10 @@ a {
 .thumbnail-list {
     list-style: none;
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 auto;
+    order: 2;
     white-space: nowrap;
     overflow-x: auto;
 }
@@ -68,6 +75,13 @@ a {
 .thumbnail-image {
     width: 100%;
     display: block;
+}
+
+.detail-image-container {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .detail-image {
